@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10244a"><title>KanaSprint — A little practice goes a long way.</title>
+  <link rel="manifest" href="/manifest.webmanifest"><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="mark">カ<span>»</span></div><div class="brand-name">KanaSprint</div></div>
+    <p class="tagline">A little practice goes a long way.</p>
+    <nav id="nav">
+      <button class="nav-item active" data-page="home">⌂ <span>Dashboard</span></button>
+      <button class="nav-item" data-page="characters">あ <span>Character Recognition</span></button>
+      <button class="nav-item" data-page="words">文 <span>Word Recognition</span></button>
+      <button class="nav-item" data-page="sentences">▤ <span>Sentence Reading</span></button>
+      <button class="nav-item" data-page="weakness">◎ <span>Weakness Training</span></button>
+      <button class="nav-item" data-page="progress">▥ <span>Progress</span></button>
+    </nav>
+    <div class="sidebar-bottom"><button id="accountBtn" class="account-btn">Sign in / Sync progress</button></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="mobile-brand">カ KanaSprint</div><div class="top-actions"><span id="syncState">Saved on this device</span><button id="mobileAccount" class="small-btn">Account</button></div></header>
+    <section id="view"></section>
+  </main>
+</div>
+<div id="modal" class="modal hidden"><div class="modal-card"><button class="close" id="closeModal">×</button><h2>Sync your progress</h2><p>Create an account or sign in to keep your practice history across devices.</p><label>Email<input id="email" type="email" placeholder="you@example.com"></label><label>Password<input id="password" type="password" placeholder="At least 6 characters"></label><div class="modal-actions"><button class="primary" id="signIn">Sign in</button><button class="secondary" id="signUp">Create account</button></div><p id="authMsg" class="muted"></p><p class="tiny">You can practise without an account. Your progress stays in this browser until you configure cloud sync.</p></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="/app.js"></script>
+</body></html>
